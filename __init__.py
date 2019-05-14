@@ -48,32 +48,32 @@ class MoveStopSkill(MycroftSkill):
      
     def handle_MV_F_intent(self, message):
         self.speak_dialog("MV.F")
-        msg="MVF"
+        msg="MVF"+"\n"
         ser00.write(bytes(msg, 'utf-8'))
         
     def handle_MV_B_intent(self, message):
         self.speak_dialog("MV.B")
-        msg="MVB"
+        msg="MVB"+"\n"
         ser00.write(bytes(msg, 'utf-8'))
         
     def handle_S_T_intent(self, message):
         self.speak_dialog("ST")
-        msg="ST"
+        msg="ST"+"\n"
         ser00.write(bytes(msg, 'utf-8')) 
     
     def handle_MV_L_intent(self, message):
         self.speak_dialog("MV.L")
-        msg="MVL"
+        msg="MVL"+"\n"
         ser00.write(bytes(msg, 'utf-8')) 
         
     def handle_MV_R_intent(self, message):
         self.speak_dialog("MV.R")
-        msg="MVR"
+        msg="MVR"+"\n"
         ser00.write(bytes(msg, 'utf-8'))
 
     def handle_M_M_intent(self, message):
         self.speak_dialog("MM")
-        msg="MM"
+        msg="MM"+"\n"
         ser00.write(bytes(msg, 'utf-8'))
 
     def stop(self):
