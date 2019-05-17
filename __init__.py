@@ -1,5 +1,4 @@
 # Copyright 2016 Mycroft AI, Inc.
-#
 # This file is part of Mycroft Core.
 
 __author__ = 'Eya-AFFES'
@@ -19,15 +18,15 @@ LOGGER = getLogger(__name__)
 #This section starts logging of the Skill in the mycroft-skills.log file. 
 #If you remove this line, your Skill will not log any errors, and you will have difficulty debugging.
 
-class MoveStopSkill(MycroftSkill):
+class MovecarSkill(MycroftSkill):
     def __init__(self):
         #This method is the constructor, and the key function it has is to define the name of the Skill.
-        super(MoveStopSkill, self).__init__(name="MoveStopSkill")
+        super(MovecarSkill, self).__init__(name="MovecarSkill")
         
     def initialize(self):
-        #initialize()function defines each of the Intents of the Skill. 
+        #The initialize()function defines each of the Intents of the Skill. 
         
-        #Intents defined in vocab files
+        #Intents are defined in vocab files
         S_T_intent = IntentBuilder("STIntent").require("STKeyword").build()
         self.register_intent(S_T_intent, self.handle_S_T_intent)
 
@@ -85,4 +84,4 @@ class MoveStopSkill(MycroftSkill):
 
 
 def create_skill():
-    return MoveStopSkill()
+    return MovecarSkill()
